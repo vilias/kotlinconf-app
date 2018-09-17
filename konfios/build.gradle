@@ -20,9 +20,17 @@ def pluginArgument = '-Xplugin=' + pluginPath
 
 sourceSets {
     main {
+        kotlin.srcDirs "src"
         component {
             target 'ios_x64', 'ios_arm64'
             outputKinds = [FRAMEWORK]
+            extraOpts '--disable', 'devirtualization', '-module_name', 'KT', pluginArgument
+        }
+    }
+    test {
+        kotlin.srcDirs "test"
+        component {
+            target 'macos_x64'
             extraOpts '--disable', 'devirtualization', '-module_name', 'KT', pluginArgument
         }
     }

@@ -1,14 +1,12 @@
 package org.jetbrains.kotlinconf.backend
 
-import com.github.salomonbrys.kotson.*
 import io.ktor.application.*
 import io.ktor.client.*
-import io.ktor.client.call.*
 import io.ktor.client.features.json.*
+import io.ktor.client.request.*
 import io.ktor.http.*
 import kotlinx.coroutines.*
 import org.jetbrains.kotlinconf.data.*
-import java.net.*
 import java.text.*
 import java.time.*
 import java.util.*
@@ -56,11 +54,8 @@ fun Application.launchSyncJob(sessionizeUrl: String, sessionizeInterval: Long) {
 }
 
 suspend fun synchronizeWithSessionize(url: String) {
-    val client = HttpClient()
-    val response = client.call(URL(url)) {}
-    val text = response.receive<String>()
-    var data = gson.fromJson<AllData>(text)
-    data = data.copy(sessions = data.sessions?.plus(fakeVotingSession))
+    var data = client.get<AllData>(url)
+    data = data.copy(sessions = data.sessions + fakeVotingSession)
     sessionizeData = SessionizeData(data)
 }
 

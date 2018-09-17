@@ -1,7 +1,7 @@
 package org.jetbrains.kotlinconf.model
 
 import org.jetbrains.kotlinconf.*
-import org.jetbrains.kotlinconf.api.*
+import api.*
 import org.jetbrains.kotlinconf.data.*
 import org.jetbrains.kotlinconf.presentation.*
 

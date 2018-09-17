@@ -9,7 +9,7 @@ import io.ktor.client.call.*
 import kotlinx.coroutines.*
 import org.jetbrains.anko.*
 import org.jetbrains.kotlinconf.*
-import org.jetbrains.kotlinconf.api.*
+import api.*
 import org.jetbrains.kotlinconf.data.*
 import java.io.*
 

@@ -1,6 +1,11 @@
 apply plugin: 'kotlin-platform-common'
 apply plugin: 'kotlinx-serialization'
 
+sourceSets {
+    main.kotlin.srcDirs "src"
+    test.kotlin.srcDirs "test"
+}
+
 dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
 
@@ -13,5 +18,3 @@ dependencies {
     testImplementation "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
     testImplementation "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
 }
-
-kotlin.experimental.coroutines "enable"

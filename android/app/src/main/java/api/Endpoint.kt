@@ -1,4 +1,4 @@
-package org.jetbrains.kotlinconf.api
+package api
 
 import org.jetbrains.kotlinconf.*
 
