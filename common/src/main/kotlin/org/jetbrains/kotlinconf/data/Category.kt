@@ -7,6 +7,8 @@ import kotlinx.serialization.*
 data class Category(
     val id: Int,
     val sort: Int,
-    val title: String,
-    val items: List<CategoryItem>
+    @Optional
+    val title: String = "",
+    @Optional
+    val items: List<CategoryItem> = emptyList()
 )
