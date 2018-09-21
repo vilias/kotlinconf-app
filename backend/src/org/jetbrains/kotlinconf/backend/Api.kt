@@ -197,17 +197,17 @@ fun Routing.apiVote(database: Database, production: Boolean) {
             val sessionId = vote.sessionId ?: throw BadRequest()
             val rating = vote.rating ?: throw BadRequest()
 
-            val session = getSessionizeData().allData.sessions.firstOrNull { it.id == sessionId } ?: throw NotFound()
-            val nowTime = simulatedTime(production)
-            val startVotesAt = LocalDateTime.parse(session.startsAt, dateFormat)
-            val endVotesAt = LocalDateTime.parse(session.endsAt, dateFormat).plusMinutes(15)
-            val votingPeriodStarted = startVotesAt?.let { ZonedDateTime.of(it, keynoteTimeZone).isBefore(nowTime) } ?: true
-            val votingPeriodEnded = endVotesAt?.let { ZonedDateTime.of(it, keynoteTimeZone).isBefore(nowTime) } ?: true
-
-            if (!votingPeriodStarted)
-                return@post call.respond(comeBackLater)
-            if (votingPeriodEnded)
-                return@post call.respond(tooLate)
+//            val session = getSessionizeData().allData.sessions.firstOrNull { it.id == sessionId } ?: throw NotFound()
+//            val nowTime = simulatedTime(production)
+//            val startVotesAt = LocalDateTime.parse(session.startsAt, dateFormat)
+//            val endVotesAt = LocalDateTime.parse(session.endsAt, dateFormat).plusMinutes(15)
+//            val votingPeriodStarted = startVotesAt?.let { ZonedDateTime.of(it, keynoteTimeZone).isBefore(nowTime) } ?: true
+//            val votingPeriodEnded = endVotesAt?.let { ZonedDateTime.of(it, keynoteTimeZone).isBefore(nowTime) } ?: true
+//
+//            if (!votingPeriodStarted)
+//                return@post call.respond(comeBackLater)
+//            if (votingPeriodEnded)
+//                return@post call.respond(tooLate)
 
             val timestamp = LocalDateTime.now(Clock.systemUTC())
             if (database.changeVote(principal.token, sessionId, rating, timestamp))
