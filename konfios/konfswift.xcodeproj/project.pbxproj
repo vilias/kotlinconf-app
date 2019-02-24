@@ -20,6 +20,7 @@
 		2C6393481F743F73004953A3 /* UiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6393471F743F73004953A3 /* UiUtils.swift */; };
 		2C76DBDB2158F0BE009A9557 /* TermsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76DBDA2158F0BE009A9557 /* TermsController.swift */; };
 		2CA847C1214BA6F8000A094C /* Pods_konfswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4F0183213ED71700FCD207 /* Pods_konfswift.framework */; };
+		3277270AC06370A88AC232B2 /* Pods_konfswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650713D8A409168EDA5FA1DE /* Pods_konfswift.framework */; };
 		6F254FB1C8A15F5393A98E9A /* Pods_konfswiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA84E09CE082A09696F42F6 /* Pods_konfswiftTests.framework */; };
 		D3B66AE3214E9CF70078D58D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B66AE2214E9CF70078D58D /* BaseView.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 			files = (
 				2CA847C1214BA6F8000A094C /* Pods_konfswift.framework in Frameworks */,
 				2C3662A9221FFF2400A2FD4D /* main.framework in Frameworks */,
+				3277270AC06370A88AC232B2 /* Pods_konfswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +249,7 @@
 				TargetAttributes = {
 					2C50FD8F1F729FE000B3F845 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 29C3V4PUK8;
+						DevelopmentTeam = E3C9K7QFQ6;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -550,7 +552,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29C3V4PUK8;
+				DEVELOPMENT_TEAM = E3C9K7QFQ6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,7 +582,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29C3V4PUK8;
+				DEVELOPMENT_TEAM = E3C9K7QFQ6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
