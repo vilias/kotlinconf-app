@@ -1,4 +1,5 @@
 PODS:
+  - Brightcove-Player-Core/dynamic (6.3.11)
   - DynamicBlurView (2.0.2)
   - MBProgressHUD (1.0.0)
   - PopupDialog (0.8.1):
@@ -9,12 +10,15 @@ PODS:
   - TagListView-ObjC (0.1.1)
 
 DEPENDENCIES:
+  - Brightcove-Player-Core/dynamic
   - MBProgressHUD (= 1.0.0)
   - PopupDialog (= 0.8.1)
   - SDWebImage (= 4.1.0)
   - TagListView-ObjC (= 0.1.1)
 
 SPEC REPOS:
+  https://github.com/brightcove/BrightcoveSpecs.git:
+    - Brightcove-Player-Core
   https://github.com/cocoapods/specs.git:
     - DynamicBlurView
     - MBProgressHUD
@@ -23,12 +27,13 @@ SPEC REPOS:
     - TagListView-ObjC
 
 SPEC CHECKSUMS:
+  Brightcove-Player-Core: 2984d9852c0cffad76949e95172db22c20380266
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   PopupDialog: 3d4e8e0795c3a614f407d730986c9b9af9781123
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   TagListView-ObjC: 432991e24c5177eb4fa7d721de7084f09f39a0b8
 
-PODFILE CHECKSUM: ed3ade7c66f8e8988ced495905b84a99c0ee0b6e
+PODFILE CHECKSUM: 735eae20c04b665b07396ebe246814ab07f887f2
 
 COCOAPODS: 1.5.3

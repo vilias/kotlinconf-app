@@ -1,3 +1,6 @@
+source 'https://github.com/brightcove/BrightcoveSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '9.0'
 
 target 'konfswift' do
@@ -8,6 +11,8 @@ target 'konfswift' do
   pod 'MBProgressHUD', '1.0.0'
   pod 'TagListView-ObjC', '0.1.1'
   pod 'PopupDialog', '0.8.1'
+  
+  pod 'Brightcove-Player-Core/dynamic'
 
   target 'konfswiftTests' do
     inherit! :search_paths
